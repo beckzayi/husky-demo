@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel ./index.html",
-    "eslint": "npx eslint --config=./.eslintrc.js --format=stylish --color .",
+    "eslint": "npx eslint --config=./.eslintrc.js --format=stylish --color --fix .",
     "prettify": "npx prettier --write .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,6 +24,20 @@
     "eslint": "7.9.0",
     "eslint-config-prettier": "6.11.0",
     "eslint-plugin-prettier": "3.1.4",
+    "husky": "4.3.0",
+    "lint-staged": "10.4.0",
     "prettier": "2.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts}": [
+      "npm run prettify",
+      "npm run eslint",
+      "git add"
+    ]
   }
 }
