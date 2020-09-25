@@ -4,7 +4,7 @@ module.exports = {
     es6: true,
     node: true,
   },
-  extends: ['eslint:recommended'],
+  extends: ['eslint:recommended', 'plugin:prettier/recommended'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -17,9 +17,8 @@ module.exports = {
     ecmaVersion: 11,
     sourceType: 'module',
   },
-  plugins: [],
+  plugins: ['prettier'],
   rules: {
-    semi: 0,
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
     strict: 0,
   },
