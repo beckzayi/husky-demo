@@ -36,8 +36,7 @@
   "lint-staged": {
     "*.{js,jsx,ts}": [
       "npm run prettify",
-      "npm run eslint",
-      "git add"
+      "npm run eslint"
     ]
   }
 }
