@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel ./index.html",
+    "eslint": "npx eslint --config=./.eslintrc.js --format=stylish --color .",
     "prettify": "npx prettier --write .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,6 +20,8 @@
   },
   "homepage": "https://github.com/beckzayi/husky-demo#readme",
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "7.9.0",
     "prettier": "2.1.2"
   }
 }
